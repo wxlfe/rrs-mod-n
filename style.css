@@ -1,0 +1,19 @@
+body {
+    background: rebeccapurple;
+    font-family: sans-serif;
+}
+
+.card {
+    background: white;
+    margin: 1em;
+    padding: 1em;
+    border: .2em solid transparent;
+    border-radius: 1em;
+    box-shadow: .5em .5em 1em rgba(0, 0, 0, .5);
+    overflow: hidden;
+    text-align: center;
+}
+
+#crs-output, #rrs-output {
+    overflow: auto;
+}
