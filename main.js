@@ -28,7 +28,7 @@ function gcd(a, b){
 
 function constructCRS(mod){
     crs = [];
-    for(i = 1; i < mod; i++){
+    for(i = 0; i < mod; i++){
         crs.push(i);
     }
     return "{" + crs.toString() + "}";
