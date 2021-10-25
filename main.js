@@ -9,6 +9,7 @@ $(document).ready(function(){
         if(mod > 0 || mod === ""){
             $("#crs-output").text(constructCRS(mod));
             $("#rrs-output").text(constructRRS(mod));
+            $("#euler-output").text(totient(mod));
         } else {
             alert("Only integers greater than 1 are permitted");
             $(this).val('');
@@ -42,4 +43,14 @@ function constructRRS(mod){
         }
     }
     return "{" + rrs.toString() + "}";
+}
+
+function totient(mod){
+    rrs = [];
+    for(j = 0; j < crs.length; j++){
+        if(gcd(mod, crs[j]) === 1){
+            rrs.push(crs[j]);
+        }
+    }
+    return rrs.length;
 }
